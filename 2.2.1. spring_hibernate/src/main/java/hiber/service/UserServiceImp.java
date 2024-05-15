@@ -28,9 +28,7 @@ public class UserServiceImp implements UserService {
 
    @Transactional(readOnly = true)
    @Override
-   public User UserByCar(String model, int series) {
+   public List<User> UserByCar(String model, int series) {
       return userDao.UserByCar(model, series);
    }
-
-
 }

@@ -22,7 +22,7 @@ public class MainApp {
       User user1 = new User("User1", "LastName1", "user1@mail.io", car1);
       User user2 = new User("User2", "LastName2", "user2@mail.io", car2);
       User user3 = new User("User3", "LastName3", "user2@mail.io", car3);
-      User user4 = new User("User4", "LastName4", "user3@mail.io", car4);
+      User user4 = new User("User4", "LastName4", "user3@mail.io", null);
 
       userService.add(user1);
       userService.add(user2);
@@ -34,7 +34,9 @@ public class MainApp {
       }
       System.out.println("");
 
-      System.out.println(userService.UserByCar("model3", 12));
+      for (User user : userService.UserByCar("model3", 12)) {
+         System.out.println(user);
+      }
 
       context.close();
    }
